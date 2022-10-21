@@ -1,4 +1,4 @@
-# A025 - Responsividade 
+# Responsividade - Exercício
 
 ### Setup do projeto no Git
 
