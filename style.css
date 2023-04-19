@@ -4,16 +4,95 @@
     font-family: sans-serif;
     color: white;
   }
+
+  .container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+  }
+  p{
+    text-align: center;
+  }
   
   #item-1 {
     background-color: steelblue;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/4;
+    grid-row: 1/5;
+    border-radius: 10px;
+
   }
   
   #item-2 {
     background-color: #fe7e02;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/5;
+    border-radius: 10px;
   }
   
   #item-3 {
     background-color: #45525b;
+    justify-content: center;
+    align-items: center;
+    grid-column: 4/5;
+    grid-row: 1/5;
+    border-radius: 10px;
   }
   
+  @media screen and (max-device-width: 1000px) {
+    #item-1{
+      grid-column: 1/4;
+      grid-row: 1/4;
+    }
+    #item-2{
+      grid-column: 1/5;
+      grid-row: 4/5;
+    }
+    #item-3{
+      grid-column: 4/5;
+      grid-row: 1/4;
+    }
+  }
+  @media screen and (max-device-width: 800px) {
+    #item-1{
+      grid-column: 1/5;
+    }
+    #item-2{
+      grid-column: 1/3;
+      grid-row: 4/5;
+    }
+    #item-3{
+      grid-column: 3/5;
+      grid-row: 4/5;
+    }
+  }
+
+/* Passo 1: 
+Estilizar a main para display:grid;
+
+quando usamos o grid definimos as colunas e linhas que o template vai ter. */
+/* Passo 2:
+no container definimos o display:grid;
+grid-tamplete-columns: 1rf 1rf 1rf 1rf; (quatro colunas com o mesmo tamanho)
+grid-templete-rows: 1fr 1fr 1fr 1fr;
+
+Passo 3: definir a altura da tela do container para 100vh; */
+/* Passo 4:  no item-1 teremos as configurações: 
+grid-colum: 2/4 
+grid-row: 1/5
+
+Passo 5: Configuramos o item-2 para 
+grid-column: 1/2
+grid-row: 1/5
+
+passo 6: o item-3 então fica com as seguintes propriedades :
+grid-column: 4/5
+grid-row: 1/5
+
+passo 7: use o media scree para definir as mudanças a partir de 1000px. (max-widht) */
